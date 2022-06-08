@@ -21,6 +21,17 @@ from drf_yasg import openapi
 
 #importar nuestros sistemas de rutas de nuestros aplicativos
 from users.api.router import router_user
+from proceinstitucion.api.router import router_proceinstitucion
+from institucion.api.router import router_institucion
+from unidorg.api.router import router_unidorg
+from tipodocpersonal.api.router import router_tipodocpersonal
+from estadousuario.api.router import router_estadousuario
+from usuarionivel.api.router import router_usuarionivel
+from personal.api.router import router_personal
+from acceso.api.router import router_acceso
+from segpersonal.api.router import router_segpersonal
+from condlaboral.api.router import router_condlaboral
+from anexo.api.router import router_anexo
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -39,8 +50,19 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redocs/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-
     #Sistema de Rutas
     path('api/', include('users.api.router')),
-    path('api/',include(router_user.urls))
+path('api/', include('unidorg.api.router')),
+    path('api/',include(router_user.urls)),
+    path('api/',include(router_proceinstitucion.urls)),
+    path('api/',include(router_institucion.urls)),
+    path('api/',include(router_unidorg.urls)),
+    path('api/',include(router_tipodocpersonal.urls)),
+    path('api/',include(router_estadousuario.urls)),
+    path('api/',include(router_usuarionivel.urls)),
+    path('api/',include(router_personal.urls)),
+    path('api/',include(router_acceso.urls)),
+    path('api/',include(router_segpersonal.urls)),
+    path('api/',include(router_condlaboral.urls)),
+    path('api/',include(router_anexo.urls))
 ]

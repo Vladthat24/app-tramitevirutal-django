@@ -611,10 +611,10 @@ class Fiscalizacionposteriormuestreo(models.Model):
 
 
 class FiscalizacionposteriorExcel(models.Model):
-    n_exped_field = models.CharField(db_column='N° Exped#', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
+    n_exped_field = models.CharField(db_column='Nï¿½ Exped#', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     fecha_recep_field = models.DateTimeField(db_column='Fecha Recep#', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     tipo_doc_field = models.CharField(db_column='Tipo Doc# ', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
-    n_doc_field = models.CharField(db_column='N° Doc#', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
+    n_doc_field = models.CharField(db_column='Nï¿½ Doc#', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     fecha_doc_field = models.DateTimeField(db_column='Fecha Doc# ', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it ended with '_'.
     asunto = models.CharField(db_column='ASUNTO', max_length=255, blank=True, null=True)  # Field name made lowercase.
     solicitante = models.CharField(db_column='SOLICITANTE', max_length=255, blank=True, null=True)  # Field name made lowercase.
@@ -1330,7 +1330,7 @@ class Siusuario(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'SIUsuario'
+        db_table = 'SI'Usuario
 
 
 class StdwRep04(models.Model):
@@ -1535,9 +1535,9 @@ class Tuparequisitos(models.Model):
 
 
 class TupaDigemid(models.Model):
-    año = models.FloatField(db_column='AÑO', blank=True, null=True)  # Field name made lowercase.
+    aï¿½o = models.FloatField(db_column='Aï¿½O', blank=True, null=True)  # Field name made lowercase.
     mes = models.FloatField(db_column='MES', blank=True, null=True)  # Field name made lowercase.
-    n_expediente = models.CharField(db_column='N° EXPEDIENTE', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    n_expediente = models.CharField(db_column='Nï¿½ EXPEDIENTE', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     descripcion_tupa = models.CharField(db_column='DESCRIPCION_TUPA', max_length=255, blank=True, null=True)  # Field name made lowercase.
     remitente = models.CharField(db_column='REMITENTE', max_length=255, blank=True, null=True)  # Field name made lowercase.
     direccion_remitente = models.CharField(db_column='DIRECCION REMITENTE', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
@@ -27804,13 +27804,13 @@ class LogMovimientoIndicacion(models.Model):
 
 class NombradosTemp(models.Model):
     f1 = models.FloatField(db_column='F1', blank=True, null=True)  # Field name made lowercase.
-    órgano = models.CharField(db_column='Órgano', max_length=255, blank=True, null=True)  # Field name made lowercase.
-    unidad_orgánica = models.CharField(db_column='Unidad Orgánica', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    ï¿½rgano = models.CharField(db_column='ï¿½rgano', max_length=255, blank=True, null=True)  # Field name made lowercase.
+    unidad_orgï¿½nica = models.CharField(db_column='Unidad Orgï¿½nica', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     apellido_paterno = models.CharField(db_column='Apellido Paterno', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     apellido_materno = models.CharField(db_column='Apellido Materno', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     nombres = models.CharField(db_column='Nombres', max_length=255, blank=True, null=True)  # Field name made lowercase.
     dni = models.CharField(db_column='DNI', max_length=255, blank=True, null=True)  # Field name made lowercase.
-    condición = models.FloatField(db_column='Condición', blank=True, null=True)  # Field name made lowercase.
+    condiciï¿½n = models.FloatField(db_column='Condiciï¿½n', blank=True, null=True)  # Field name made lowercase.
     f9 = models.CharField(db_column='F9', max_length=255, blank=True, null=True)  # Field name made lowercase.
     f10 = models.CharField(db_column='F10', max_length=255, blank=True, null=True)  # Field name made lowercase.
     f11 = models.CharField(db_column='F11', max_length=255, blank=True, null=True)  # Field name made lowercase.
@@ -28228,7 +28228,7 @@ class UsuariosMinsa(models.Model):
     apellidos = models.CharField(db_column='Apellidos', max_length=255, blank=True, null=True)  # Field name made lowercase.
     primer_nombre = models.CharField(db_column='Primer nombre', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     nombre_para_mostrar = models.CharField(db_column='Nombre para mostrar', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
-    teléfono_del_trabajo = models.CharField(db_column='Teléfono del Trabajo', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    telï¿½fono_del_trabajo = models.CharField(db_column='Telï¿½fono del Trabajo', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     anexo_asignado = models.CharField(db_column='Anexo Asignado', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     anexos_que_utiliza = models.CharField(db_column='Anexos que utiliza', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     nro_celular_minsa = models.CharField(db_column='Nro Celular MINSA', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
@@ -28236,7 +28236,7 @@ class UsuariosMinsa(models.Model):
     nro_celular_personal = models.CharField(db_column='Nro Celular Personal', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     estado = models.CharField(db_column='Estado', max_length=255, blank=True, null=True)  # Field name made lowercase.
     cuenta_de_red = models.CharField(db_column='Cuenta de Red', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
-    dirección_de_correo_electrónico = models.CharField(db_column='Dirección de correo electrónico', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    direcciï¿½n_de_correo_electrï¿½nico = models.CharField(db_column='Direcciï¿½n de correo electrï¿½nico', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     uo_nivel1 = models.CharField(db_column='UO Nivel1', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     uo_nivel2 = models.CharField(db_column='UO Nivel2', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
     uo_nivel3 = models.CharField(db_column='UO Nivel3', max_length=255, blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.

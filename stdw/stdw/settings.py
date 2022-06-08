@@ -24,7 +24,7 @@ SECRET_KEY = '2$^-+n!0%rtz53%i+nqb-9h8m$e5nfsy)r*s9qtwkm1^qhbnl5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',"localhost"]
+ALLOWED_HOSTS = ['127.0.0.1',"localhost","192.168.3.200"]
 
 # Application definition
 
@@ -39,7 +39,17 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'users',
-    'unidorganica',
+    'proceinstitucion',
+    'institucion',
+    'unidorg',
+    'tipodocpersonal',
+    'estadousuario',
+    'usuarionivel',
+    'personal',
+    'acceso',
+    'segpersonal',
+    'condlaboral',
+    'anexo'
 ]
 
 MIDDLEWARE = [
@@ -122,8 +132,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
 
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-
+    ),
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
 # Internationalization
